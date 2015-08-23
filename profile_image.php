@@ -110,31 +110,31 @@
                 picRealWidth = this.width;   // Note: $(this).width() will not
                 picRealHeight = this.height; // work for in memory images.
 
-                var selector_of_actual_image = s_img1_And_img2;
-                var width_actual_img = picRealWidth;
-                var width_actual_img_for_calc = picRealWidth;
-                var height_actual_img = picRealHeight;
-                var height_actual_img_for_calc = picRealHeight;
-                var area =  height_actual_img_for_calc * width_actual_img_for_calc;
+                var selector_of_actual_image = s_img1_And_img2,
+                    width_actual_img = picRealWidth,
+                    width_actual_img_for_calc = picRealWidth,
+                    height_actual_img = picRealHeight,
+                    height_actual_img_for_calc = picRealHeight,
+                    area =  height_actual_img_for_calc * width_actual_img_for_calc;
 
                 new_reload_img();
 
                 function new_reload_img(){
                     'use strict';
-                    var sign = "";
-                    var type_resize = "";
+                    var sign = "",
+                        type_resize = "";
                     function real_width_AND_height_resize (type_resize,sign){
                         'use strict';
                         //   sign : addition(+) or  Subtraction(-)
                         //   type_resize : width or height
 
                         if(type_resize === "width"){
-                            width_actual_img = 300;
-                            var calc_residual_H = 300 - width_actual_img_for_calc ;
-                            var abs_result_H = Math.abs(calc_residual_H) / width_actual_img_for_calc;
-                            var calc_width_with_increase = abs_result_H + width_actual_img_for_calc;
-                            var divide_W = area / calc_width_with_increase;
-                            var multiply_H = abs_result_H * divide_W ;
+                            width_actual_img = 300,
+                            var calc_residual_H = 300 - width_actual_img_for_calc,
+                                abs_result_H = Math.abs(calc_residual_H) / width_actual_img_for_calc,
+                                calc_width_with_increase = abs_result_H + width_actual_img_for_calc,
+                                divide_W = area / calc_width_with_increase,
+                                multiply_H = abs_result_H * divide_W ;
                             if (sign === "+"){
                                 height_actual_img = height_actual_img + multiply_H ;
                             }else{
@@ -142,12 +142,12 @@
                                 height_actual_img = height_actual_img - multiply_H ;
                             }
                         }else if (type_resize === "height"){
-                            height_actual_img = 300;
-                            var calc_residual_W = 300 - height_actual_img_for_calc;
-                            var abs_result_W = Math.abs(calc_residual_W) / height_actual_img_for_calc;
-                            var calc_width_height_increase = abs_result_W + height_actual_img_for_calc;
-                            var divide_H = area / calc_width_height_increase;
-                            var multiply_W = abs_result_W * divide_H;
+                            height_actual_img = 300,
+                            var calc_residual_W = 300 - height_actual_img_for_calc,
+                                abs_result_W = Math.abs(calc_residual_W) / height_actual_img_for_calc,
+                                calc_width_height_increase = abs_result_W + height_actual_img_for_calc,
+                                divide_H = area / calc_width_height_increase,
+                                multiply_W = abs_result_W * divide_H;
                             if (sign === "+"){
                                 width_actual_img = width_actual_img + multiply_W ;
                             }else{
