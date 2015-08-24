@@ -129,7 +129,7 @@
                         //   type_resize : width or height
 
                         if(type_resize === "width"){
-                            width_actual_img = 300,
+                            width_actual_img = 300;
                             var calc_residual_H = 300 - width_actual_img_for_calc,
                                 abs_result_H = Math.abs(calc_residual_H) / width_actual_img_for_calc,
                                 calc_width_with_increase = abs_result_H + width_actual_img_for_calc,
@@ -142,7 +142,7 @@
                                 height_actual_img = height_actual_img - multiply_H ;
                             }
                         }else if (type_resize === "height"){
-                            height_actual_img = 300,
+                            height_actual_img = 300;
                             var calc_residual_W = 300 - height_actual_img_for_calc,
                                 abs_result_W = Math.abs(calc_residual_W) / height_actual_img_for_calc,
                                 calc_width_height_increase = abs_result_W + height_actual_img_for_calc,
